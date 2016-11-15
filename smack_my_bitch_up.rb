@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 # Exit early if no sessions with my username are found
-exit unless `who -q`.include? ENV['USER']
+# exit unless `who -q`.include? ENV['USER']
 
 require 'dotenv'
 require 'twilio-ruby'
@@ -14,8 +14,8 @@ TWILIO_AUTH_TOKEN  = ENV['TWILIO_AUTH_TOKEN']
 @twilio = Twilio::REST::Client.new TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN
 
 # Phone numbers
-my_number  = '+xxx'
-her_number = '+xxx'
+my_number  = '+12015975630' #'+08618911900805'
+her_number = '+08615800901617'
 
 reason = [
   'Working hard',
